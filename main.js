@@ -35,6 +35,8 @@ function init(){
       //console.log("m: " + m);
       groups = Math.floor(n/m);
     }
+    else if(m == 0)
+      alert("Please enter groups of size 1 or more");
     //console.log("groupsHERE: " + groups);
     
 
@@ -81,6 +83,8 @@ function init(){
       }
     }
 
+    if(groups == 0 && m!=0)
+      alert("Not Enough Student to form groups of size " + m);
     //el.value = '';
     groupss.value = '';
 
