@@ -15,7 +15,7 @@ function init(){
     var names  = el.value.split(/[ ,]+/);
     console.log(names.length);
     var rand = Math.floor(Math.random() * (names.length));
-    console.log('random student: ' + names[rand]);
+    //console.log('random student: ' + names[rand]);
     var el2 = document.querySelector('.pickedStud');
     el2.innerHTML = '<p>' + names[rand] + '</p>';
     el2.style.height = '50px';
@@ -23,19 +23,19 @@ function init(){
   }
 
     function sortGroups(){
-    console.log("In sortGROUPS");
+    //console.log("In sortGROUPS");
     var groupss = document.querySelector('#textArea3');
-    console.log("groups:" + groupss.value);   
+    //console.log("groups:" + groupss.value);   
     var el = document.querySelector('#textArea');
     var names  = el.value.split(/[ ,]+/);
     var n = names.length;
     var m = groupss.value;
     var groups = 0;
     if( m != 0){
-      console.log("m: " + m);
+      //console.log("m: " + m);
       groups = Math.floor(n/m);
     }
-    console.log("groupsHERE: " + groups);
+    //console.log("groupsHERE: " + groups);
     
 
     var elem = document.querySelector('div.grouplist');
@@ -48,10 +48,10 @@ function init(){
       group.style.marginLeft = "5%";
       var ref = document.querySelector('div.grouplist');
       ref.appendChild(group);
-      console.log("-----------------");
+      //console.log("-----------------");
         for(var j =0; j<m; j++){
           var rand = Math.floor(Math.random() * (names.length));
-          console.log(names[rand]);
+          //console.log(names[rand]);
           var spanEl = document.createElement('li');
           spanEl.innerHTML =  names[rand];
           group.appendChild(spanEl);
@@ -60,7 +60,7 @@ function init(){
           ref.appendChild(spanEl);
         }
     }
-    console.log("-----------------");
+    //console.log("-----------------");
 
     if(names.length !=0 && groups>0){
       var group = document.createElement('span');
@@ -71,7 +71,7 @@ function init(){
       ref.appendChild(group);
       while(names.length !=0){
         var rand = Math.floor(Math.random() * (names.length));
-        console.log(names[rand]);
+        //console.log(names[rand]);
         var spanEl = document.createElement('li');
         spanEl.innerHTML =  names[rand];
         group.appendChild(spanEl);
