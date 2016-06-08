@@ -50,7 +50,7 @@ function init(){
       groups = Math.floor(n/m);
     }
     else if(m == 0)
-      alert("Please enter groups of size 1 or more");
+      alert("Invalid Entry");
     //console.log("groupsHERE: " + groups);
     
 
