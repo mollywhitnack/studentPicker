@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', init);
 
+
 function init(){
     //console.log("Loaded!!");
-    //var elToClear = document.querySelector('#textArea');
+
     document.getElementsByClassName('submitBtn')[0].addEventListener('click', randomStudent)
     document.getElementsByClassName('groupBtn')[0].addEventListener('click', sortGroups)
 
+    //document.querySelector('#textArea').innerHTML = '';
     //clear text area here?
     //var elToClear = document.querySelector('#textArea');
     //elToClear.value='';
@@ -22,12 +24,12 @@ function init(){
     var el2 = document.querySelector('.pickedStud');
     el2.innerHTML = '<p>' + names[rand] + '</p>';
     el2.style.height = '50px';
-   
+    el.style.color = "transparent"//; = "trasparent";
     //Clear list
-    el.value='';
+    //el.value='';
   }
 
-  function sortGroups(){
+    function sortGroups(){
     console.log("In sortGROUPS");
     var groupss = document.querySelector('#textArea3');
     console.log("groups:" + groupss.value);   
@@ -86,10 +88,7 @@ function init(){
       }
     }
 
-    el.value = '';
+    //el.value = '';
     groupss.value = '';
 
   }
-
-
-
