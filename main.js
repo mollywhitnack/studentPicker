@@ -3,14 +3,9 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init(){
     //console.log("Loaded!!");
-
     document.getElementsByClassName('submitBtn')[0].addEventListener('click', randomStudent)
     document.getElementsByClassName('groupBtn')[0].addEventListener('click', sortGroups)
 
-    //document.querySelector('#textArea').innerHTML = '';
-    //clear text area here?
-    //var elToClear = document.querySelector('#textArea');
-    //elToClear.value='';
   }
 
   function randomStudent(){
@@ -24,9 +19,7 @@ function init(){
     var el2 = document.querySelector('.pickedStud');
     el2.innerHTML = '<p>' + names[rand] + '</p>';
     el2.style.height = '50px';
-    el.style.color = "transparent"//; = "trasparent";
-    //Clear list
-    //el.value='';
+    el.style.color = "transparent";
   }
 
     function sortGroups(){
@@ -51,7 +44,7 @@ function init(){
     for(var i = 0; i<groups; i++){
       var group = document.createElement('span');
       group.classList.add('group' + i);
-      group.innerHTML = "Group " + i;
+      group.innerHTML = ("<h3> Group " + i)
       group.style.marginLeft = "5%";
       var ref = document.querySelector('div.grouplist');
       ref.appendChild(group);
@@ -72,7 +65,7 @@ function init(){
     if(names.length !=0 && groups>0){
       var group = document.createElement('span');
       group.classList.add('group' + groups);
-      group.innerHTML = "Group " + groups;
+      group.innerHTML = ("<h3> Group " + groups);
       group.style.marginLeft = "5%";
       var ref = document.querySelector('div.grouplist');
       ref.appendChild(group);
