@@ -44,7 +44,7 @@ function init(){
     for(var i = 0; i<groups; i++){
       var group = document.createElement('span');
       group.classList.add('group' + i);
-      group.innerHTML = ("<h3> Group " + i)
+      group.innerHTML = ("<h4> Group " + i)
       group.style.marginLeft = "5%";
       var ref = document.querySelector('div.grouplist');
       ref.appendChild(group);
@@ -65,7 +65,7 @@ function init(){
     if(names.length !=0 && groups>0){
       var group = document.createElement('span');
       group.classList.add('group' + groups);
-      group.innerHTML = ("<h3> Group " + groups);
+      group.innerHTML = ("<h4> Group " + groups);
       group.style.marginLeft = "5%";
       var ref = document.querySelector('div.grouplist');
       ref.appendChild(group);
